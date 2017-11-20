@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="Test" default="jar">
+
+<target name="info" >
+<echo> Welcome to Info block</echo>
+</target>
+
+<target name="clean" depends="info">
+<delete dir="./ClassFile"/>
+<echo> Welcome to Clean block</echo>
+</target>
+
+
+<target name="compile" depends="clean">
+<echo> Welcome to Compile block</echo>
+<mkdir dir="./ClassFile"/>
+<javac includeantruntime="false" srcdir="./" destdir="./ClassFile" />
+</target>
+
+<target name="run" depends="compile">
+<echo> Welcome to Run block</echo>
+</target>
+
+<target name="jar" depends="run">
+<echo> Welcome to Jar block</echo>
+<jar destfile="./jar/Test.jar" basedir="./ClassFile"/>
+</target>
+
+
+</project>
