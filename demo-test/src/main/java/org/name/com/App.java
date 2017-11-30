@@ -1,4 +1,4 @@
-package a1;
+package org.name.com;
 
 /**
  * Hello world!
